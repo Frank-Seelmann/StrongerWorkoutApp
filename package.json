@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^16.9.1"
+  },
+  "name": "strongerworkoutapp",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frank-Seelmann/StrongerWorkoutApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frank-Seelmann/StrongerWorkoutApp/issues"
+  },
+  "homepage": "https://github.com/Frank-Seelmann/StrongerWorkoutApp#readme"
+}
