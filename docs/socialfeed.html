@@ -118,43 +118,67 @@
             </div>
         </nav>
 
-        <div class="columns is centered">
-            
-
-            <!-- Suggested workouts -->
-            <div class="column is-one-third has-background-light" style="padding: 25px;">
+        <div class="columns is-centered">
+            <div class="column is-half has-background-light">
                 <div class="card">
                     <div class="card-image">
-                        <figure class="image">
-                            <img src="../images/randomPerson1.jpg" alt="Profile Picture">
-                        </figure>
+                      <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                      </figure>
                     </div>
-                </div>
-                <ul>
-                    <!-- this is the template for the notifaction population -->
-                    <li v-for="notifaction in notificationsHub">
-                        <div class="card-content">
-                            <article class=" message is-primary">
-                                <div class="message-header">
-                                    <p>{{ `${notifaction.welcome}` }}</p>
-                                    <button class="delete"></button>
-                                </div>
-                                <div class="message-body">
-                                    <p>{{ `${notifaction.message}` }}</p>
-                                </div>
-                            </article>
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-left">
+                          <figure class="image is-48x48">
+                            <img src="../images/randomPerson1.jpg" alt="Placeholder image">
+                          </figure>
                         </div>
-                    </li>
-                </ul>
-                <button class="button is-fullwidth">
-                    <a
-                        href="https://www.imleagues.com/spa/account/ssoredirect?schoolId=8416cbb6b1164e498beaf753a4074df3">
-                        Sign up to Workout
-                    </a>
-                </button>
-            </div>
+                        <div class="media-content">
+                          <p class="title is-4">John Smith</p>
+                          <p class="subtitle is-6">@johnsmith</p>
+                        </div>
+                      </div>
+                  
+                      <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris.
+                        <br>
+                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                      </div>
+                    </div>
+                  </div>
 
-            
+                  <br>
+
+                  <div class="card">
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-left">
+                          <figure class="image is-48x48">
+                            <img src="../images/randomPerson1.jpg" alt="Placeholder image">
+                          </figure>
+                        </div>
+                        <div class="media-content">
+                          <p class="title is-4">John Smith</p>
+                          <p class="subtitle is-6">@johnsmith</p>
+                        </div>
+                      </div>
+                  
+                      <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris.
+                        <br>
+                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
 
     </div>
 
