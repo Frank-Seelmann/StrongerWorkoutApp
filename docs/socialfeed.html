@@ -11,15 +11,13 @@
 
 <body>
     <div class='container'>
-        <!-- Navbar from Bulma -->
+        
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="index.html">
                     <img src="../images/workoutEmoji.PNG" width="80" height="70">
                 </a>
-
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" id="burger">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -28,6 +26,7 @@
 
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
+
                     <a class="navbar-item" ; href="index.html">
                         Stronger
                     </a>
@@ -43,7 +42,7 @@
                             <a class="navbar-item" ; href="summary.html">
                                 Summary and Reports
                             </a>
-                            </div>
+                        </div>
                     </div>
 
                     <div class="navbar-item has-dropdown is-hoverable">
@@ -57,14 +56,16 @@
                             <a class="navbar-item" ; href="post.html">
                                 Create Post
                             </a>
-                            </div>
+                            <a class="navbar-item" ; href="profile.html">
+                                Profile
+                            </a>
+                        </div>
                     </div>
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link" ; href="learn.html">
                             Learn
                         </a>
-
                         <div class="navbar-dropdown">
                             <a class="navbar-item" ; href="learn.html#abs">
                                 Abs
@@ -88,7 +89,6 @@
                         <a class="navbar-link">
                             More
                         </a>
-
                         <div class="navbar-dropdown">
                             <a class="navbar-item" ; href="about.html">
                                 About
@@ -98,6 +98,7 @@
                                 Report an issue
                             </a>
                         </div>
+
                     </div>
                 </div>
 
@@ -113,15 +114,47 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </nav>
 
-        <section class="section">
-            <h1 class="title">Social Feed</h1>
-            <h2 class="subtitle">
-                See how your friends are getting <strong>Stronger</strong>!
-            </h2>
-        </section>
+        <div class="columns is centered">
+            
+
+            <!-- Suggested workouts -->
+            <div class="column is-one-third has-background-light" style="padding: 25px;">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img src="../images/randomPerson1.jpg" alt="Profile Picture">
+                        </figure>
+                    </div>
+                </div>
+                <ul>
+                    <!-- this is the template for the notifaction population -->
+                    <li v-for="notifaction in notificationsHub">
+                        <div class="card-content">
+                            <article class=" message is-primary">
+                                <div class="message-header">
+                                    <p>{{ `${notifaction.welcome}` }}</p>
+                                    <button class="delete"></button>
+                                </div>
+                                <div class="message-body">
+                                    <p>{{ `${notifaction.message}` }}</p>
+                                </div>
+                            </article>
+                        </div>
+                    </li>
+                </ul>
+                <button class="button is-fullwidth">
+                    <a
+                        href="https://www.imleagues.com/spa/account/ssoredirect?schoolId=8416cbb6b1164e498beaf753a4074df3">
+                        Sign up to Workout
+                    </a>
+                </button>
+            </div>
+
+            
 
     </div>
 
@@ -133,6 +166,8 @@
             </p>
         </div>
     </footer>
+
+    <script src="index.js"></script>
 
 </body>
 

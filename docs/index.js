@@ -1,4 +1,4 @@
-//Will be replaced in Vue later... I think
+//Will be replaced in Vue later...
 
 //tabs
 const tabs = document.querySelectorAll('.tabs li');
@@ -19,3 +19,11 @@ tabs.forEach((tab) => {
         })
     })
 })
+
+//mobile menu
+const burgerIcon = document.querySelector('#burger');
+const navbarMenu = document.querySelector('#navbarBasicExample');
+
+burgerIcon.addEventListener('click', () => {
+    navbarMenu.classList.toggle('is-active')
+});
