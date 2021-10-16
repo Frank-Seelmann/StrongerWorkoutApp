@@ -1,0 +1,46 @@
+<template>
+  <div class="container is-fluid">
+    <section class="section">
+      <h1 class="title">Create a Post</h1>
+      <h2 class="subtitle">Add a new post so others can view it!</h2>
+    </section>
+
+    <div class="file has-name">
+      <label class="file-label">
+        <input class="file-input" type="file" name="resume" />
+        <span class="file-cta">
+          <span class="file-icon">
+            <i class="fas fa-upload"></i>
+          </span>
+          <span class="file-label"> Choose a file… </span>
+        </span>
+        <span class="file-name"> Screen Shot 2017-07-29 at 15.54.25.png </span>
+      </label>
+    </div>
+
+    <br />
+
+    <div class="field">
+      <label class="label">Message</label>
+      <div class="control">
+        <textarea class="textarea" placeholder="Textarea"></textarea>
+      </div>
+    </div>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link">Submit</button>
+      </div>
+      <div class="control">
+        <button class="button is-link is-light">Cancel</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Post",
+  components: {},
+};
+</script>
