@@ -1,13 +1,11 @@
 <template>
   <div class="container is-fluid">
-
     <section class="section">
       <h1 class="title">Exercise Tracker</h1>
       <h2 class="subtitle">Log your exercise progress.</h2>
     </section>
 
     <div class="columns is-centered">
-
       <div class="column is-half">
         <h2 class="subtitle">Log your workout for today!</h2>
         <div class="control" id="workout">
@@ -38,14 +36,18 @@
           </table>
         </div>
       </div>
-
     </div>
+    <foot />
   </div>
 </template>
 
 <script>
+import foot from "../components/Footer.vue";
+
 export default {
   name: "Extracker",
-  components: {},
+  components: {
+    foot,
+  },
 };
 </script>

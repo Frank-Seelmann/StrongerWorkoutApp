@@ -9,5 +9,16 @@
         <router-link to="/learn">learn new workouts!</router-link>
       </h2>
     </section>
+    <foot />
   </div>
 </template>
+
+<script>
+import foot from "../components/Footer.vue";
+
+export default {
+  components: {
+    foot
+  },
+}
+</script>

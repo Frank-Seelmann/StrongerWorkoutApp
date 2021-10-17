@@ -9,5 +9,16 @@
       <h2 class="subtitle">Progress this Week</h2>
       <progress class="progress is-success" value="60" max="100">60%</progress>
     </div>
+    <foot />
   </div>
 </template>
+
+<script>
+import foot from "../components/Footer.vue";
+
+export default {
+  components: {
+    foot,
+  },
+};
+</script>

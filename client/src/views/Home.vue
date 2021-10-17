@@ -125,17 +125,18 @@
       </div>
 
     </section>
+    <footerwrap />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
-
+import footerwrap from "../components/FooterWrap.vue";
 export default {
   name: 'Home',
   components: {
-    
+    footerwrap
   },
 }
 </script>

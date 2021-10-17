@@ -105,12 +105,17 @@
         </div>
       </div>
     </div>
+    <foot />
   </div>
 </template>
 
 <script>
+import foot from "../components/Footer.vue";
+
 export default {
   name: "Profile",
-  components: {},
+  components: {
+    foot,
+  },
 };
 </script>

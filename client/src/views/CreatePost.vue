@@ -35,12 +35,17 @@
         <button class="button is-link is-light">Cancel</button>
       </div>
     </div>
+    <foot />
   </div>
 </template>
 
 <script>
+import foot from "../components/Footer.vue";
+
 export default {
   name: "CreatePost",
-  components: {},
+  components: {
+    foot
+  },
 };
 </script>
