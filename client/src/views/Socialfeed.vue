@@ -6,6 +6,7 @@
 
         <div class="post" v-for="p in posts" :key="p.src">
           <post :post="p"/> 
+          <br>
         </div>
         
       </div>
