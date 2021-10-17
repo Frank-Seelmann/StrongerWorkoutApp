@@ -105,17 +105,17 @@
         </div>
       </div>
     </div>
-    <foot />
+    <footwrap />
   </div>
 </template>
 
 <script>
-import foot from "../components/Footer.vue";
+import footwrap from "../components/FooterWrap.vue";
 
 export default {
   name: "Profile",
   components: {
-    foot,
+    footwrap,
   },
 };
 </script>
