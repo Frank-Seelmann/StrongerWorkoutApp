@@ -3,4 +3,4 @@ module.exports = {
     outputDir: '../docs'
 }
 
-publicPath: "/docs"
+publicPath: "../docs"
