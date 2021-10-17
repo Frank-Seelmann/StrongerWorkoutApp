@@ -39,10 +39,11 @@
 <script>
 export default {
     props: {
-        Post: Object
+        post: Object
     }
 }
 </script>
 
 <style>
+
 </style>

@@ -5,7 +5,7 @@
       <div class="column is-one-third is-offset-one-third">
 
         <div class="post" v-for="p in posts" :key="p.src">
-          <post :post="p" />
+          <post :post="p"/> 
         </div>
         
       </div>
