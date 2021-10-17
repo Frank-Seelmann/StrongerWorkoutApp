@@ -1,14 +1,36 @@
 <template>
-  <div class="buttons">
-    <router-link class="button is-primary" to="/login">
-      <strong>Sign up</strong>
-    </router-link>
-    <router-link class="button is-light" to="/login"> Log in </router-link>
-  </div>
+    <div class="buttons" v-if="!Session.user">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light" @click="login">
+            Log in
+          </a>
+    </div>
+    <div v-else>
+        Hello {{name}} 
+    </div>
 </template>
 
 <script>
-export default {};
+import Session from "../services/session";
+export default {
+    data (){
+        return ({ 
+            Session
+        })
+    },
+    methods: {
+        login(){
+            this.$router.push('/login');
+        }
+    },
+    computed:{
+        name(){
+            return this.Session.user.firstName + ' ' + this.Session.user.lastName;
+        }
+    }
+}
 </script>
 
 <style>

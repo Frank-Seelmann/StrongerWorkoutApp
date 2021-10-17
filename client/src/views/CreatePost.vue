@@ -40,7 +40,7 @@
 
 <script>
 export default {
-  name: "Post",
+  name: "CreatePost",
   components: {},
 };
 </script>
