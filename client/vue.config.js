@@ -1,6 +1,5 @@
 module.exports = {
     // options...
-    outputDir: '../docs'
+    outputDir: '../docs',
+    publicPath: "/docs/"
 }
-
-publicPath: "/docs/"
