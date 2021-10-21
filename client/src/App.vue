@@ -4,6 +4,7 @@
       <div class="column">
         <div id="nav">
           <Nav />
+          <messages/>
           <router-view />
         </div>
       </div>
@@ -13,10 +14,12 @@
 
 <script>
 import Nav from "./components/Nav.vue";
+import Messages from "./components/Messages.vue";
 
 export default {
   components: {
     Nav,
+    Messages
   },
 };
 </script>
