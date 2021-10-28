@@ -1,10 +1,13 @@
 const express = require('express');
 const path = require('path');
+require('dotenv').config();
+
+console.log(`Is dotenv working? ${process.env.ENV_TEST}`);
 
 const usersController = require('./controllers/users');
 
 const app = express()
-const port = 3000
+const port = process.env.PORT ?? 3000;
 
 app
   .use('/', express.static(path.join(__dirname, '../docs')))
