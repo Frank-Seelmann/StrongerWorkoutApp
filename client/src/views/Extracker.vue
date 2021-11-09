@@ -9,7 +9,7 @@
       <div class="column is-half">
         <h2 class="subtitle">Log your workout for today!</h2>
         <div class="control" id="workout">
-          <label class="label">Enter Workout:</label>
+          <label class="label animate__animated animate__headShake">Enter Workout:</label>
           <input class="input" type="text" placeholder="Workout" />
           <Button text="Add Task" type="link"/>
         </div>

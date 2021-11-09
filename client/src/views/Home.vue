@@ -6,7 +6,7 @@
 >
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">
+          <h1 class="title animate__animated animate__bounce">
             Welcome to <strong>Stronger</strong>
           </h1>
           <h2 class="subtitle">

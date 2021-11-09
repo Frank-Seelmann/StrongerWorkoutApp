@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <h1 class="title">Feed Page</h1>
+    <h1 class="title animate__animated animate__bounceIn">Feed Page</h1>
     <div class="columns">
       <div class="column is-one-third is-offset-one-third">
 
