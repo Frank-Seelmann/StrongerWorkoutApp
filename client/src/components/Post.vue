@@ -3,6 +3,7 @@
   <div class="card-image">
     <figure class="image is-4by3">
       <img :src="post.src" :alt="post.alt">
+      <button class="delete" @click="$emit('remove')"></button>
     </figure>
   </div>
   <div class="card-content">
@@ -45,5 +46,9 @@ export default {
 </script>
 
 <style>
-
+  button.delete {
+    top: 5px;
+    right: 5px;
+    position: absolute;
+  }
 </style>
