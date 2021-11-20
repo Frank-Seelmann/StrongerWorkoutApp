@@ -4,6 +4,9 @@
 /* B"H
 */
 /*
+/* B"H
+*/
+
 import { api } from "./myFetch";
 
 export function GetAll() { return api('users'); }
@@ -26,7 +29,7 @@ export function Delete(user_id) {
 export function Login(handle, password){
     return api('users/login', { handle, password });
 }
-*/
+/*
 const list = [
     { 
         firstName: 'Moshe',
@@ -118,3 +121,4 @@ export function Login(handle, password){
 
     return { user: data };
 }
+*/
