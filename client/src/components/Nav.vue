@@ -41,12 +41,12 @@
         </div>
 
         <div class="navbar-item has-dropdown is-hoverable">
-          <router-link class="navbar-item" to="/socialfeed" active-class="is-active">
+          <router-link class="navbar-item" to="/feed" active-class="is-active">
             Social
           </router-link>
 
           <div class="navbar-dropdown">
-            <router-link class="navbar-item" to="/socialfeed">
+            <router-link class="navbar-item" to="/feed">
               Social Feed
             </router-link>
             <router-link class="navbar-item" to="/createpost">

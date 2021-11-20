@@ -4,7 +4,7 @@ import Extracker from '../views/Extracker.vue';
 import Learn from '../views/Learn.vue';
 import Post from '../views/CreatePost.vue';
 import Profile from '../views/Profile.vue';
-import Socialfeed from '../views/Socialfeed.vue';
+import Feed from '../views/Feed.vue';
 import Session from '../services/session';
 
 const routes = [
@@ -55,9 +55,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/ReportIssue.vue')
   },
   {
-    path: '/socialfeed',
-    name: 'Socialfeed',
-    component: Socialfeed,
+    path: '/feed',
+    name: 'feed',
+    component: Feed,
     meta: { requiresLogin: true }
   },
   {
@@ -66,6 +66,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Summary.vue'),
     meta: { requiresLogin: true }
   },
+  {
+    path: '/users',
+    name: 'Users',
+    component: () => import(/* webpackChunkName: "admin" */ '../views/Users.vue')
+},
 ]
 
 const router = createRouter({

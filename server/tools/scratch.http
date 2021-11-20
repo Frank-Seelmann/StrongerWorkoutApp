@@ -46,13 +46,27 @@ DELETE  http://localhost:3000/users/618a640f7e7f808f5d6290f4
 ###
 POST http://localhost:3000/users/seed
 
+###
+POST http://localhost:3000/users/@vp/follow/@JewPaltz
+
+###
+DELETE http://localhost:3000/users/@vp/follow/@JewPaltz
+
+###
+PATCH http://localhost:3000/users/@vp/approve/@JewPaltz
+Content-Type: application/json
+
+{
+    "shouldApprove": true
+}
+
 
 ####################################################
 http://localhost:3000/posts
 
 
 ###
-http://localhost:3000/posts/618cac0f347b76cc068f980e
+http://localhost:3000/posts/618caf150c80331dc116b4f6
 
 ###
 http://localhost:3000/posts/wall/@JewPaltz
@@ -74,6 +88,7 @@ Content-Type: application/json
     "user_handle": "@JewPaltz",
     "isPublic": true
 }
+
 ###
 PATCH http://localhost:3000/posts/618cac0f347b76cc068f980e
 Content-Type: application/json
@@ -83,7 +98,30 @@ Content-Type: application/json
 }
 
 ###
-DELETE  http://localhost:3000/posts/618cac0f347b76cc068f980e
+DELETE  http://localhost:3000/posts/61967ece566fcf65d11aa0cf
+
+###
+GET http://localhost:3000/posts/comments/619687bdb64f4cabade5bb1e
+
+###
+POST http://localhost:3000/posts/618caf150c80331dc116b4f6/comments
+Content-Type: application/json
+
+{
+    "text": "That's just a placeholder. Next time add a real image",
+    "user_handle": "@vp"
+}
+
+###
+PATCH http://localhost:3000/posts/comments/619687bdb64f4cabade5bb1e
+Content-Type: application/json
+
+{
+    "text": "That's just a placeholder. Next time add a real image!"
+}
+
+###
+DELETE  http://localhost:3000/posts/comments/619687bdb64f4cabade5bb1e
 
 ###
 POST http://localhost:3000/posts/seed
