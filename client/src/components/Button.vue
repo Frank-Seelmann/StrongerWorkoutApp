@@ -1,37 +1,35 @@
 <template>
-    <div v-if="type === 'success'">
+  <div v-if="type === 'success'">
     <button class="button is-success" @click="onClick()">
-        {{ text }}
+      {{ text }}
     </button>
-    </div>
-    <div v-else-if="type === 'link'">
+  </div>
+  <div v-else-if="type === 'link'">
     <button class="button is-link" @click="onClick()">
-        {{ text }}
+      {{ text }}
     </button>
-    </div>
-    <div v-else>
+  </div>
+  <div v-else>
     <button class="button is-danger" @click="onClick()">
-        {{ text }}
+      {{ text }}
     </button>
-    </div>
+  </div>
 </template>
 
 <script>
-
 export default {
-  name: 'Button',
+  name: "Button",
   props: {
     text: String,
     type: String,
   },
   methods: {
     onClick() {
-      this.$emit('btn-click')
+      this.$emit("btn-click");
     },
   },
-}
+};
 </script>
 
 <style>
-
 </style>

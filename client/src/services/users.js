@@ -10,11 +10,11 @@
 import { api } from "./myFetch";
 
 export function GetAll() { return api('users'); }
-export function Get(user_id) { return  api('users/' + user_id); }
-export function GetByHandle(handle) { return  api('users/byhandle/' + handle); } 
+export function Get(user_id) { return api('users/' + user_id); }
+export function GetByHandle(handle) { return api('users/byhandle/' + handle); }
 
 export function Add(user) {
-     return api('users/register', user);
+    return api('users/register', user);
 }
 
 
@@ -26,12 +26,12 @@ export function Delete(user_id) {
     return api('users/' + user_id, {}, 'DELETE');
 }
 
-export function Login(handle, password){
+export function Login(handle, password) {
     return api('users/login', { handle, password });
 }
 /*
 const list = [
-    { 
+    {
         firstName: 'Moshe',
         lastName: 'Plotkin',
         handle: '@JewPaltz',
@@ -44,7 +44,7 @@ const list = [
         following: [ { handle: '@vp', isApproved: true }, { handle: '@johnsmith', isApproved: true }, ],
         get name(){ return this.firstName + ' ' + this.lastName },
     },
-    { 
+    {
         firstName: 'Kamala',
         lastName: 'Harris',
         handle: '@vp',
@@ -56,7 +56,7 @@ const list = [
         ],
         following: [ { handle: '@johnsmith', isApproved: true }, ],
     },
-    { 
+    {
         firstName: 'John',
         lastName: 'Smith',
         handle: '@johnsmith',
@@ -73,7 +73,7 @@ const list = [
 
 export function GetAll() { return list; }
 export function Get(user_id) { return list[user_id]; }
-export function GetByHandle(handle) { return ({ ...list.find( x => x.handle == handle ), password: undefined }); } 
+export function GetByHandle(handle) { return ({ ...list.find( x => x.handle == handle ), password: undefined }); }
 
 export function Add(user) {
     if(!user.firstName){

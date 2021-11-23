@@ -6,20 +6,20 @@ const session = {
     user: null,
     messages: [],       // {text: string, type: string }
     toRoute: '/feed',
-    async Login(handle, password){
+    async Login(handle, password) {
 
         try {
             const response = await Login(handle, password);
 
             this.user = response.user;
-    
+
             router.push(this.toRoute);
-                
+
         } catch (error) {
             this.Error(error);
         }
     },
-    Error(error){
+    Error(error) {
         console.error(error);
         const msg = error.msg ?? error;
 

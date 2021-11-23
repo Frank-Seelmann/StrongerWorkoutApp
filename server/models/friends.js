@@ -10,23 +10,23 @@ module.exports.collection = collection;
 
 function Follow(follower, followee) {
     return collection.updateOne(
-        { handle: follower, "following.handle": { $ne: followee} },
-        { $addToSet : { following: { handle: followee, isApproved: false } } }
+        { handle: follower, "following.handle": { $ne: followee } },
+        { $addToSet: { following: { handle: followee, isApproved: false } } }
     );
 }
 
 function UnFollow(follower, followee) {
     return collection.updateOne(
         { handle: follower },
-        { $pull : { following: { handle: followee } } }
-    );    
+        { $pull: { following: { handle: followee } } }
+    );
 }
 
 function Approve(follower, followee, shouldApprove) {
     return collection.updateOne(
         { handle: follower, "following.handle": followee },
-        { $set : { "following.$.isApproved": shouldApprove } }
-    );  
+        { $set: { "following.$.isApproved": shouldApprove } }
+    );
 }
 
 
@@ -35,5 +35,5 @@ function GetFollowers(followee) {
 }
 
 module.exports = {
-    Follow, UnFollow, Approve, 
+    Follow, UnFollow, Approve,
 }

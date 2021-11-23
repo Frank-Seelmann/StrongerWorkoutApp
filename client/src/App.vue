@@ -4,7 +4,7 @@
       <div class="column">
         <div id="nav">
           <Nav />
-          <messages/>
+          <messages />
           <router-view />
         </div>
       </div>
@@ -19,7 +19,7 @@ import Messages from "./components/Messages.vue";
 export default {
   components: {
     Nav,
-    Messages
+    Messages,
   },
 };
 </script>

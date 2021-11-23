@@ -26,7 +26,11 @@
         </router-link>
 
         <div class="navbar-item has-dropdown is-hoverable">
-          <router-link class="navbar-item" to="/extracker" active-class="is-active">
+          <router-link
+            class="navbar-item"
+            to="/extracker"
+            active-class="is-active"
+          >
             Exercise Tracker
           </router-link>
 

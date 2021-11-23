@@ -45,7 +45,7 @@ import foot from "../components/Footer.vue";
 export default {
   name: "CreatePost",
   components: {
-    foot
+    foot,
   },
 };
 </script>

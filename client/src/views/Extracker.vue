@@ -11,10 +11,10 @@
         <div class="control" id="workout">
           <label class="label animate__animated animate__headShake">Enter Workout:</label>
           <input class="input" type="text" placeholder="Workout" />
-          <Button text="Add Task" type="link"/>
+          <Button text="Add Task" type="link" />
         </div>
         <br />
-        <Tasks :tasks="tasks"/>
+        <Tasks :tasks="tasks" />
         <br />
         <div class="container">
           Check out your workout <a href="summary.html">summary and reports</a>!
@@ -54,36 +54,35 @@ export default {
   components: {
     foot,
     Button,
-    Tasks
+    Tasks,
   },
-  //temporary
   data() {
     return {
-      tasks: []
-    }
+      tasks: [],
+    };
   },
   created() {
     this.tasks = [
       {
         id: 1,
-        text: 'Ab Workout',
-        day: 'November 7th at 11:00am',
+        text: "Ab Workout",
+        day: "November 7th at 11:00am",
         reminder: true,
       },
       {
         id: 2,
-        text: 'Arm Workout',
-        day: 'November 8th at 12:00pm',
+        text: "Arm Workout",
+        day: "November 8th at 12:00pm",
         reminder: true,
       },
       {
         id: 3,
-        text: 'Chest Workout',
-        day: 'November 9th at 1:00pm',
+        text: "Chest Workout",
+        day: "November 9th at 1:00pm",
         reminder: true,
-      }
-    ]
-  }
+      },
+    ];
+  },
 };
 </script>
 

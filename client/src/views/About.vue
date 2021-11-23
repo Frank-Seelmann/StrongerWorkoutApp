@@ -18,9 +18,9 @@ import foot from "../components/Footer.vue";
 
 export default {
   components: {
-    foot
+    foot,
   },
-}
+};
 </script>
 
 <style>

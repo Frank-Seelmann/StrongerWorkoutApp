@@ -70,7 +70,7 @@ const routes = [
     path: '/users',
     name: 'Users',
     component: () => import(/* webpackChunkName: "admin" */ '../views/Users.vue')
-},
+  },
 ]
 
 const router = createRouter({
@@ -79,12 +79,12 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    if(to.meta.requiresLogin && !Session.user){
-        next('/login');
-    }
-    else{
-        next();
-    }
-  } )
+  if (to.meta.requiresLogin && !Session.user) {
+    next('/login');
+  }
+  else {
+    next();
+  }
+})
 
 export default router
