@@ -28,9 +28,9 @@
       </div>
     </div>
     <footer class="card-footer">
-      <a href="#" class="card-footer-item">Save</a>
-      <a href="#" class="card-footer-item">Edit</a>
-      <a href="#" class="card-footer-item">Delete</a>
+      <a href="#" class="card-footer-item">Like</a>
+      <a href="#" class="card-footer-item">Comment</a>
+      <a href="#" class="card-footer-item">Share</a>
     </footer>
   </div>
 </template>
