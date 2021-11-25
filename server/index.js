@@ -6,7 +6,7 @@ console.log(`The best class at New Paltz is ${process.env.BEST_CLASS}`);
 
 const usersController = require('./controllers/users');
 const postsController = require('./controllers/posts');
-const ExerciseController = require('./controllers/exercises');
+const taskController = require('./controllers/task');
 
 const app = express()
 const port = process.env.PORT || 3000;
@@ -24,6 +24,7 @@ app
     .use(express.json())
     .use('/users', usersController)
     .use('/posts', postsController)
+    .use('/task', taskController)
 
 app
     .get('*', (req, res) => res.sendFile(path.join(__dirname, '../docs/index.html')))
