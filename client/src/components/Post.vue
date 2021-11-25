@@ -19,7 +19,6 @@
           </p>
           <p class="subtitle is-6">
             {{ post.user.handle }}
-            <time :datetime="post.time">{{ prettyDate }}</time>
           </p>
         </div>
       </div>
@@ -40,15 +39,6 @@
 export default {
   props: {
     post: Object,
-  },
-  computed: {
-    prettyDate() {
-      if (this.post.time && this.post.time.toDateString) {
-        return this.post.time.toDateString();
-      } else {
-        return "Never";
-      }
-    },
   },
 };
 </script>
