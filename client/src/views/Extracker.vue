@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { Add, GetAll } from "../services/task";
+import { Add, GetFeed } from "../services/task";
 import AddTask from "../components/addTask.vue";
 import Session from "../services/session";
 import Task from "../components/Task.vue";
@@ -43,20 +43,11 @@ export default {
   },
   data: () => ({
     tasks: [],
-    activetab: 1,
-    email: null,
-    password: null,
     Session,
-    NAME: "",
-    CAL: "",
-    TIME: "",
-    newTask: { name: "", calories: "", time: "" },
+    newTask: { name: "", repsAndSets: "", weight: "", user_handle: Session.user.handle },
   }),
   async mounted() {
-    this.newTask.name = this.NAME;
-    this.newTask.calories = this.CAL;
-    this.newTask.time = this.TIME;
-    this.tasks = await GetAll(Session.user.handle);
+    this.tasks = await GetFeed(Session.user.handle);
   },
   methods: {
     submit() {

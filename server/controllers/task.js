@@ -17,5 +17,10 @@ app
             .then(x => res.status(201).send(x))
             .catch(next)
     })
+    .get("/feed/:handle", (req, res, next) => {
+        model.GetFeed(req.params.handle)
+            .then(x => res.send(x))
+            .catch(next)
+    })
 
 module.exports = app;
