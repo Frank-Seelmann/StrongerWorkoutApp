@@ -53,9 +53,6 @@
             <router-link class="navbar-item" to="/feed">
               Social Feed
             </router-link>
-            <router-link class="navbar-item" to="/createpost">
-              Create Post
-            </router-link>
             <router-link class="navbar-item" to="/profile">
               Profile
             </router-link>

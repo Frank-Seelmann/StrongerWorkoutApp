@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import Extracker from '../views/Extracker.vue';
 import Learn from '../views/Learn.vue';
-import Post from '../views/CreatePost.vue';
 import Profile from '../views/Profile.vue';
 import Feed from '../views/Feed.vue';
 import Session from '../services/session';
@@ -36,12 +35,6 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
-  },
-  {
-    path: '/createpost',
-    name: 'CreatePost',
-    component: Post,
-    meta: { requiresLogin: true }
   },
   {
     path: '/profile',
