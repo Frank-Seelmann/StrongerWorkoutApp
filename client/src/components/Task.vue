@@ -2,14 +2,15 @@
   <div class="card">
     <header class="card-header">
       <p class="card-header-title">{{ task.name }}</p>
+      {{ task.user_handle }}
     </header>
     <div class="card-content">
       <div class="content">
           <p>
-            {{ task.repsAndSets }}
+            Reps x Sets: {{ task.repsAndSets }}
           </p>
           <p>
-            {{ task.weight }}
+            Weight: {{ task.weight }}
           </p>
       </div>
     </div>

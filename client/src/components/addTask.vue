@@ -28,7 +28,7 @@
             <label class="label">Weight</label>
             <input
               class="input"
-              placeholder="20lbs"
+              placeholder="Ex. 20lbs"
               v-model="task.weight"
             />
           </div>
