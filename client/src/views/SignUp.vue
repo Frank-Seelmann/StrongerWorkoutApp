@@ -105,6 +105,7 @@ export default {
       email: null,
       pic: null,
       isAdmin: true,
+      following: [],
     },
   }),
   methods: {
