@@ -18,11 +18,11 @@
       <div class="column is-half">
         <h2 class="subtitle">Past Workouts</h2>
         <div class="table-container">
-
           <div class="task" v-for="p in tasks" :key="p.src">
-            <task :task="p" />
+            <div v-if="p.user_handle === newTask.user_handle">
+              <task :task="p" />
+            </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -44,7 +44,12 @@ export default {
   data: () => ({
     tasks: [],
     Session,
-    newTask: { name: "", repsAndSets: "", weight: "", user_handle: Session.user.handle },
+    newTask: {
+      name: "",
+      repsAndSets: "",
+      weight: "",
+      user_handle: Session.user.handle,
+    },
   }),
   async mounted() {
     this.tasks = await GetFeed(Session.user.handle);
@@ -59,8 +64,11 @@ export default {
       });
     },
     async add() {
-      console.log('Please work');
-      await Add(this.newTask);
+      console.log("Please work");
+      const response = await Add(this.newTask);
+      if (response) {
+        this.tasks.unshift(response);
+      }
     },
   },
 };
