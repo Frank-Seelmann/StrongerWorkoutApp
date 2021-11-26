@@ -55,19 +55,17 @@ export default {
     this.tasks = await GetFeed(Session.user.handle);
   },
   methods: {
-    submit() {
-      this.$oruga.notification.open({
-        message: "Workout Succesfully Recorded!",
-        variant: "info",
-        position: "top",
-        closable: true,
-      });
-    },
     async add() {
       console.log("Please work");
       const response = await Add(this.newTask);
       if (response) {
         this.tasks.unshift(response);
+        this.$oruga.notification.open({
+        message: "Workout Succesfully Recorded!",
+        variant: "success",
+        position: "top",
+        closable: true,
+      });
       }
     },
   },
