@@ -8,7 +8,7 @@
               <div id="login-content">
                 <form class="box" @submit.prevent="login()">
                   <div class="field">
-                    <label class="label"> Email </label>
+                    <label class="label"> Handle </label>
                     <div class="control has-icons-left">
                       <input
                         type="text"
