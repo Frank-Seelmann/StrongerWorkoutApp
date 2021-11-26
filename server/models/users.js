@@ -75,7 +75,7 @@ module.exports.Add = async function Add(user) {
 
 
 module.exports.Update = async function Update(user_id, user) {
-
+    console.log('bruh')
     const results = await collection.findOneAndUpdate(
         { _id: new ObjectId(user_id) },
         { $set: user },

@@ -75,7 +75,7 @@
               />
             </p>
           </div>
-           <div class="field is-grouped" id="buttons">
+          <div class="field is-grouped" id="buttons">
             <div class="control">
               <button class="button is-link">Submit</button>
             </div>
