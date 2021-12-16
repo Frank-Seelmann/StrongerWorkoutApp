@@ -65,6 +65,8 @@
 </template>
 
 <script>
+import { GetAll } from "../services/users";
+
 export default {
   props: {
     newTask: Object,
@@ -72,23 +74,13 @@ export default {
   data() {
     return {
       task: this.newTask,
-      data: [
-        "Angular",
-        "Angular 2",
-        "Aurelia",
-        "Backbone",
-        "Ember",
-        "jQuery",
-        "Meteor",
-        "Node.js",
-        "Polymer",
-        "React",
-        "RxJS",
-        "Vue.js",
-      ],
+      data: [],
       name: "",
       selected: null,
     };
+  },
+  async mounted() {
+    this.data = GetAll();
   },
   computed: {
     filteredDataArray() {
