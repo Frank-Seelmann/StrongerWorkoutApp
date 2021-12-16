@@ -60,6 +60,12 @@ const routes = [
     meta: { requiresLogin: true }
   },
   {
+    path: '/ExSearch',
+    name: 'ExSearch',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ExSearch.vue'),
+    meta: { requiresLogin: true }
+  },
+  {
     path: '/users',
     name: 'Users',
     component: () => import(/* webpackChunkName: "admin" */ '../views/Users.vue')

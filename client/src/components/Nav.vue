@@ -38,6 +38,9 @@
             <router-link class="navbar-item" to="/extracker">
               Exercise Tracker
             </router-link>
+            <router-link class="navbar-item" to="/exsearch">
+              Exercise Search
+            </router-link>
             <router-link class="navbar-item" to="/summary">
               Summary and Reports
             </router-link>
