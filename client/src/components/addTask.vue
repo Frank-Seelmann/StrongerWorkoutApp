@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import { GetAll } from "../services/users";
+import { /*GetAll,*/ Search } from "../services/users";
 
 export default {
   props: {
@@ -80,7 +80,7 @@ export default {
     };
   },
   async mounted() {
-    this.data = await GetAll();
+    this.data = await Search(this.buddy);
   },
   computed: {
     filteredDataArray() {
