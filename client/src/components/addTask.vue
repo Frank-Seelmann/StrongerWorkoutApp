@@ -43,13 +43,13 @@
         </div>
         <section>
           <p class="content"><b>Selected:</b> {{ selected }}</p>
-          <o-field label="Find a workout">
+          <o-field label="Who'd you work out with?">
             <o-autocomplete
               rounded
               expanded
               v-model="name"
               :data="filteredDataArray"
-              placeholder="e.g. Squats"
+              placeholder="e.g. @JewPaltz"
               icon="search"
               clearable
               @select="(option) => (selected = option)"
