@@ -75,7 +75,7 @@ http://localhost:3000/posts/wall/@JewPaltz
 http://localhost:3000/posts/feed/@JewPaltz
 
 ###
-http://localhost:3000/posts/search?q=never
+http://localhost:3000/users/search?q=Jew
 
 ###
 POST http://localhost:3000/posts

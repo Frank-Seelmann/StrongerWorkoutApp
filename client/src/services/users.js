@@ -23,3 +23,7 @@ export function Delete(user_id) {
 export function Login(handle, password) {
     return api('users/login', { handle, password });
 }
+
+export function Search(handle) {
+    return api('/search'), {handle}
+}

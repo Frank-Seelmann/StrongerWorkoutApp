@@ -14,6 +14,11 @@ app
             })
             .catch(next)
     })
+    .get("/search", (req, res, next) => {
+        model.Search(req.query.q)
+            .then(x => res.send(x))
+            .catch(next)
+    })
     .get("/:user_id", (req, res, next) => {
         model.Get(req.params.user_id)
             .then(user => {
