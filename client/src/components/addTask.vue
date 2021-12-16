@@ -41,8 +41,9 @@
             <button class="button is-link is-light" type="reset">Cancel</button>
           </div>
         </div>
-        <section>
-          <p class="content"><b>Selected:</b> {{ selected }}</p>
+        <br />
+        <div class="field">
+          <p class="content"><b>Who'd you work out with?</b> {{ selected }}</p>
           <o-field label="Who'd you work out with?">
             <o-autocomplete
               rounded
@@ -57,7 +58,7 @@
               <template v-slot:empty>No results found</template>
             </o-autocomplete>
           </o-field>
-        </section>
+        </div>
       </div>
     </form>
   </div>
