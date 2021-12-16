@@ -41,6 +41,23 @@
             <button class="button is-link is-light" type="reset">Cancel</button>
           </div>
         </div>
+        <section>
+          <p class="content"><b>Selected:</b> {{ selected }}</p>
+          <o-field label="Find a workout">
+            <o-autocomplete
+              rounded
+              expanded
+              v-model="name"
+              :data="filteredDataArray"
+              placeholder="e.g. Squats"
+              icon="search"
+              clearable
+              @select="(option) => (selected = option)"
+            >
+              <template v-slot:empty>No results found</template>
+            </o-autocomplete>
+          </o-field>
+        </section>
       </div>
     </form>
   </div>
@@ -54,7 +71,32 @@ export default {
   data() {
     return {
       task: this.newTask,
+      data: [
+        "Angular",
+        "Angular 2",
+        "Aurelia",
+        "Backbone",
+        "Ember",
+        "jQuery",
+        "Meteor",
+        "Node.js",
+        "Polymer",
+        "React",
+        "RxJS",
+        "Vue.js",
+      ],
+      name: "",
+      selected: null,
     };
+  },
+  computed: {
+    filteredDataArray() {
+      return this.data.filter((option) => {
+        return (
+          option.toString().toLowerCase().indexOf(this.name.toLowerCase()) >= 0
+        );
+      });
+    },
   },
   watch: {
     newTask() {
