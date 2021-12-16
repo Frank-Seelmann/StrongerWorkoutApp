@@ -48,7 +48,7 @@
             <o-autocomplete
               rounded
               expanded
-              v-model="name"
+              v-model="task.buddy"
               :data="filteredDataArray"
               placeholder="e.g. @JewPaltz"
               icon="search"
@@ -75,18 +75,18 @@ export default {
     return {
       task: this.newTask,
       data: [],
-      name: "",
+      buddy: "",
       selected: null,
     };
   },
   async mounted() {
-    this.data = GetAll();
+    this.data = await GetAll();
   },
   computed: {
     filteredDataArray() {
       return this.data.filter((option) => {
         return (
-          option.toString().toLowerCase().indexOf(this.name.toLowerCase()) >= 0
+          option.toString().toLowerCase().indexOf(this.buddy.toLowerCase()) >= 0
         );
       });
     },

@@ -12,6 +12,9 @@
           <p>
             Weight: {{ task.weight }}
           </p>
+          <p>
+            Workout Buddy: {{ task.buddy }}
+          </p>
       </div>
     </div>
   </div>
