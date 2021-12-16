@@ -86,7 +86,7 @@ export default {
     filteredDataArray() {
       return this.data.filter((option) => {
         return (
-          option.toString().toLowerCase().indexOf(this.buddy.toLowerCase()) >= 0
+          option.toString().toLowerCase().indexOf(this.buddy.handle.toLowerCase()) >= 0
         );
       });
     },
